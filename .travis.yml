@@ -22,5 +22,5 @@ matrix:
 before_install:
 # for some reason, travis-perl doesnt work out that it needs to install:
   - cpanm DBIx::Class::Optional::Dependencies
-  - cpanm Env::Path
+  - cd Netdisco; perl Makefile.PL; make listalldeps | cpanm
   - eval $(curl https://travis-perl.github.io/init) --auto
