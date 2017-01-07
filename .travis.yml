@@ -1,5 +1,3 @@
-# not actually required, just because Archive::Zip tests fail
-# sudo: required
 language: perl
 perl:
    - 'blead'
@@ -20,5 +18,7 @@ matrix:
    include:
       - perl: '5.24'
         env: COVERAGE=1
+# Dist::Zilla would make this easier
 before_install:
+  - cpanm DBIx::Class:Optional::Dependencies
   - eval $(curl https://travis-perl.github.io/init) --auto
