@@ -20,5 +20,7 @@ matrix:
         env: COVERAGE=1
 # Dist::Zilla would make this easier
 before_install:
+# for some reason, travis-perl doesnt work out that it needs to install:
   - cpanm DBIx::Class::Optional::Dependencies
+  - cpanm Env::Path
   - eval $(curl https://travis-perl.github.io/init) --auto
