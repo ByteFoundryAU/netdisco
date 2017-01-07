@@ -20,5 +20,5 @@ matrix:
         env: COVERAGE=1
 # Dist::Zilla would make this easier
 before_install:
-  - cpanm DBIx::Class:Optional::Dependencies
+  - cpanm DBIx::Class::Optional::Dependencies
   - eval $(curl https://travis-perl.github.io/init) --auto
