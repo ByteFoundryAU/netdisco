@@ -3,6 +3,7 @@ use inc::Module::Install;
 name     'App-Netdisco';
 license  'bsd';
 all_from 'Netdisco/lib/App/Netdisco.pm';
+include  'Module::AutoInstall';
 
 build_subdirs 'Netdisco';
 
