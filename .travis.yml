@@ -21,6 +21,7 @@ matrix:
 # Dist::Zilla would make this easier
 before_install:
 # for some reason, travis-perl doesnt work out that it needs to install:
+  - apt-get install libsnmp-dev
   - cpanm DBIx::Class::Optional::Dependencies
   - cd Netdisco; perl Makefile.PL; make listalldeps | cpanm --quiet --notest --skip-satisfied
   - eval $(curl https://travis-perl.github.io/init) --auto
